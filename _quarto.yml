@@ -58,7 +58,7 @@ format:
         \usepackage{graphicx}
         \makeindex
         \usepackage{fontspec}
-        \setmonofont{Consolas}
+        \setmonofont{inconsolata}
         \usepackage{titling}
         \pretitle{\begin{center}\Huge\bfseries}
         \posttitle{\par\end{center}\vspace{0.75em}}
