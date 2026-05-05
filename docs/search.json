@@ -1,0 +1,382 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Simulator Laboratory",
+    "section": "",
+    "text": "Preface\nThere are certain theoretical concepts that power engineering students struggle with and there are a limited number of textbooks or videos that address these concepts within the context of power engineering. When we present those challenging concepts in class, we also want to make sure that our students develop safe working habits and environmental sensibilities related to sustainable operation of the power engineering equipment.\nThe primary purpose of this project was to design and develop simulator lab worksheets (SIM LABS) that would be used as ancillary resources for Thermodynamics and Thermal Power Plant Simulator (TPPS) courses. We have limited time to teach theory and we also have to offer practical skills to our students, so having as many SIM LABS as possible can bring those challenging concepts closer to our students and enhance their hands-on skills.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "boiler_efficiency.html",
+    "href": "boiler_efficiency.html",
+    "title": "1  Boiler Efficiency",
+    "section": "",
+    "text": "1.1 Theory\nFirst, we define efficiency. There are many ways to present it; for example, efficiency is the ability to perform a task without wasting energy, effort, or time. Mathematically, it is the ratio of useful output to thermal energy input.\nLaypersons often use the terms efficiency and effectiveness interchangeably; however, efficiency relates to minimizing waste, whereas effectiveness relates to maximizing output (more on this in Chapter 5).\nBoiler efficiency is sometimes defined as combustion efficiency, which is determined by the burner’s ability to completely burn fuel, accounting for unburnt fuel and excess air in the exhaust. Thermal efficiency, on the other hand, indicates the heat exchanger’s (i.e., the boiler’s) ability to transfer heat from the combustion process to the water or steam.\nIn general, the maximum attainable boiler efficiency depends on factors such as the fuel-burning method, furnace design, and heat transfer surfaces. In addition, fuel type, boiler load, and operating practices influence efficiency. In this lab, we focus on fuel type, boiler load, and best practices.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boiler Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "boiler_efficiency.html#boiler-thermal-efficiency",
+    "href": "boiler_efficiency.html#boiler-thermal-efficiency",
+    "title": "1  Boiler Efficiency",
+    "section": "1.2 Boiler Thermal Efficiency",
+    "text": "1.2 Boiler Thermal Efficiency\nNext, we express the boiler thermal efficiency as follows:\n\\[\\eta_{\\text{boiler}} = \\frac{\\text{Energy to steam}}{\\text{Energy from fuel}}\\]\nHere, the energy to steam is the heat transfer required to generate steam. Let:\n\n\\(h_2\\) = specific enthalpy of steam [kJ/kg]\n\\(h_1\\) = specific enthalpy of feedwater [kJ/kg]\n\nBecause steam is generated at constant pressure, the heat required to produce 1 kg of steam is:\n\\[\\text{Energy to steam} = (h_2 - h_1) \\quad \\text{[kJ]}\\]\nEnergy from fuel is calculated from the mass of fuel used and its calorific value. For coal, this is the heating value measured in a bomb calorimeter, corresponding to the internal energy of combustion. Let:\n\n\\(m_f\\) = mass of fuel burned over a given time\n\\(m_s\\) = mass of steam generated over the same time\n\\(HV\\) = heating value of the fuel [kJ/kg]\n\n\\[\\text{Energy from fuel} = m_f \\times HV \\quad \\text{[kJ]}\\]\nThus, the boiler thermal efficiency is:\n\\[\\eta_{\\text{boiler}} = \\frac{m_s (h_2 - h_1)}{m_f HV} \\times 100\\%\\]\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nYou will run four different initial conditions in this lab:\n\nI10: 230 MW, burning HFO\nI15: 80% load, burning biofuel\nI14: 80% load, burning coal\nI14: 80% load, burning coal with soot (use MD250 to configure soot variables)\n\nFor each condition, collect the relevant data to compute the boiler thermal efficiency.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boiler Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "boiler_efficiency.html#hints-tips",
+    "href": "boiler_efficiency.html#hints-tips",
+    "title": "1  Boiler Efficiency",
+    "section": "1.3 Hints & Tips",
+    "text": "1.3 Hints & Tips\nFor data collection, use trends as shown in the lab manual (see Trends sample).\n\nIn addition to pressure, temperature, and flow measurements, log the following tags in your trends:\n\n\n\nTag\nDescription\n\n\n\n\nH00810\nHFO heating value\n\n\nH00870\nPellet heating value (biofuel)\n\n\nH00830\nCoal heating value\n\n\n\nTo calculate enthalpy values, you may use an app or an online tool such as the Superheated Steam Table.\nFor the coal operation with soot buildup, use MD250 and set malfunctions as shown in the lab manual (see MD250 malfunction settings).\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include:\n\nTrend plots: All plots for each of the four conditions\nComputation: Calculate boiler thermal efficiency for the specified conditions\nConclusion: A summary (max. 500 words; use a text box if using Excel) comparing results and suggesting areas for further study",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boiler Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "boiler_efficiency.html#further-reading",
+    "href": "boiler_efficiency.html#further-reading",
+    "title": "1  Boiler Efficiency",
+    "section": "1.4 Further Reading",
+    "text": "1.4 Further Reading\n\nFundamentals of Classical Thermodynamics (SI Version): Evaluation of Actual Combustion Processes. (Wylen and Sonntag 1986)\nThermal Engineering: Capacity and Efficiency of Steam Generating Units. (Solberg, n.d.)\nBasic Engineering Thermodynamics in SI Units: Boiler calculations. (Joel 1996)\n\n\n\n\n\nJoel, Rayner. 1996. Basic Engineering Thermodynamics. 5th ed. Pearson/Prenctice Hall.\n\n\nSolberg, H. L. n.d. Thermal Engineering. John Wiley & Sons Inc.\n\n\nWylen, Gordon J. Van, and Richard E. Sonntag. 1986. Fundamentals of Classical Thermodynamics. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Boiler Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "turbine_efficiency.html",
+    "href": "turbine_efficiency.html",
+    "title": "2  Turbine Efficiency",
+    "section": "",
+    "text": "2.1 Theory\nRecall from the First and Second Law of Thermodynamics that the adiabatic process where entropy remains constant provides the maximum energy for work. As shown on the H-S coordinates, the difference in enthalpy, \\((H_1 - H_2)\\), is maximum when the lowest enthalpy \\((H_2)\\) is reached at the exit conditions. The ideal expansion is, therefore, a vertical line.\nOn the diagram above, \\(T_1\\), \\(P_1\\), and \\(P_2\\) are known process variables; for example, \\(H_1\\) is determined by using \\(T_1\\) and \\(P_1\\). \\(H_2\\) can then be found by drawing a vertical line from \\(P_1\\) to \\(P_2\\) by following adiabatic isentropic expansion (expansion at constant entropy).\nNon-ideal processes, or real processes, however, do not present straight lines as shown on the Mollier diagram due to such factors as friction. If the expansion is not isentropic (i.e., entropy is not constant but increases), the lowest enthalpy \\(H_2\\) cannot be reached at the exit conditions; in other words, \\(H_{2'} &gt; H_2\\). This means that \\(\\Delta H\\) for the ideal expansion is greater than \\(\\Delta H\\) for the non-ideal expansion between the same pressure boundaries. The internal turbine efficiency is therefore given by:\n\\[\\eta_{\\text{Turbine}} = \\frac{\\text{Actual change in enthalpy}}{\\text{Isentropic change in enthalpy}}\\]\n\\[\\eta_{\\text{Turbine}} = \\frac{(H_1 - H_{2'})}{(H_1 - H_2)}\\]\nThe difference in enthalpy \\(H_{2'} - H_2\\) is called the reheat factor and is the basis for multi-stage turbines. As can be seen on the Mollier diagram, the pressure curves are divergent. This means that the higher the pressure drop in a single-stage turbine, the greater the reheat factor and in turn the lower the turbine efficiency. However, if the steam is expanded through multiple stages and between each stage the steam is reheated, higher turbine efficiencies can be achieved. We will see this effect later in the Power Plant Efficiency lab.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Turbine Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "turbine_efficiency.html#theory",
+    "href": "turbine_efficiency.html#theory",
+    "title": "2  Turbine Efficiency",
+    "section": "",
+    "text": "Turbine efficiency (H-S diagram).\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nYou will run 3 different initial conditions in this lab:\n\n35% Load (I13),\n80% Load (I14),\n230 MW (I10).\n\nFor each condition, collect the relevant data to compute the isentropic change in enthalpy for the HP turbine. Compare your results — which of the three conditions yields the most favourable results and why?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Turbine Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "turbine_efficiency.html#hints-tips",
+    "href": "turbine_efficiency.html#hints-tips",
+    "title": "2  Turbine Efficiency",
+    "section": "2.2 Hints & Tips",
+    "text": "2.2 Hints & Tips\nIn addition to various pressure and temperature values, log the following tags in your trends:\n\nZ03020\nE03018\n\nTo calculate the enthalpy values, you may use an app or online tool such as the Superheated Steam Table.\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report is to include the following:\n\nTrend plots: Supply all plots taken for each of the 3 conditions,\nComputation: Calculate the turbine efficiency for the 3 conditions specified,\nConclusion: Write a summary (max. 500 words; use a text box if using Excel) comparing your results and suggestions for further study.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Turbine Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "turbine_efficiency.html#further-reading",
+    "href": "turbine_efficiency.html#further-reading",
+    "title": "2  Turbine Efficiency",
+    "section": "2.3 Further Reading",
+    "text": "2.3 Further Reading\n\nThermodynamics and Heat Power: Vapor power cycles. (Granet and Bluestein 2015)\n\n\n\n\n\nGranet, Irving, and Maurice Bluestein. 2015. Thermodynamics and Heat Power. CRC Press.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Turbine Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html",
+    "href": "power_plant_efficiency.html",
+    "title": "3  Power Plant Efficiency",
+    "section": "",
+    "text": "3.1 Theory\nExcluding hydroelectric power plants, most power generating plants employ a type of boiler and steam turbine. High-pressure steam leaves the boiler and enters the turbine. The steam expands in the turbine and does work which enables the turbine to drive the electric generator. The exhaust steam leaves the turbine and enters the condenser where heat is transferred from the steam to cooling water. The pressure of the condensate leaving the condenser is increased in the pump, thereby enabling the condensate to flow into the boiler. This thermodynamic cycle is known as the Rankine Cycle.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#theory",
+    "href": "power_plant_efficiency.html#theory",
+    "title": "3  Power Plant Efficiency",
+    "section": "",
+    "text": "Schematic diagram of a steam power plant",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#the-rankine-cycle-efficiency",
+    "href": "power_plant_efficiency.html#the-rankine-cycle-efficiency",
+    "title": "3  Power Plant Efficiency",
+    "section": "3.2 The Rankine Cycle Efficiency",
+    "text": "3.2 The Rankine Cycle Efficiency\nSome heat is always lost from the steam to cooling water. In addition, feed pumps consume energy, thus reducing the net work output. The Rankine Cycle efficiency is expressed as:\n\\[\\eta_{\\text{Rankine}} = \\frac{\\text{Net work output}}{\\text{Heat supplied in the boiler}}\\]\nor equivalently:\n\\[\\eta_{\\text{Rankine}} = \\frac{W_{\\text{Turbine}} - W_{\\text{Pump}}}{Q_{\\text{boiler}}}\\]\nReferring to the schematic diagram and using the enthalpy values at each state point in the Rankine cycle:\n\\[\\eta_{\\text{Rankine}} = \\frac{(h_1 - h_2) - (h_4 - h_3)}{h_1 - h_4}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#improvements-to-the-rankine-cycle-efficiency",
+    "href": "power_plant_efficiency.html#improvements-to-the-rankine-cycle-efficiency",
+    "title": "3  Power Plant Efficiency",
+    "section": "3.3 Improvements to the Rankine Cycle Efficiency",
+    "text": "3.3 Improvements to the Rankine Cycle Efficiency\n\n3.3.1 Effect of Pressure and Temperature\nIf the exhaust pressure drops from \\(P_4\\) to \\(P_4'\\), with the corresponding decrease in the temperature at which heat is rejected in the condenser, the net work increases. Similarly, if the steam is superheated in the boiler, the work output is further increased. Superheating is achieved by increasing the time the steam is exposed to the flue gases. As a result, for a given power output, a plant using superheated steam will be smaller in size than one using dry saturated steam.\n\n\n\nEffect of exhaust pressure\n\n\n\n\n3.3.2 The Reheat Cycle\nThe efficiency of the Rankine cycle is increased by superheating the steam. To improve efficiency further without requiring exotic high-temperature materials, the reheat cycle has been developed. In this cycle, steam expands to some intermediate pressure in the high-pressure turbine and is then reheated in the boiler, after which it expands in the low-pressure turbine to the exhaust pressure.\n\n\n\nEffect of superheating\n\n\nThe thermal efficiency of the Rankine cycle with reheat is:\n\\[\\eta_{\\text{thermal}} = \\frac{W_{12} + W_{67} - W_{43}}{Q_{41} + Q_{26}}\\]\n\n\n3.3.3 The Regenerative Cycle\nAnother variation of the Rankine cycle is the regenerative cycle, which uses feedwater heaters. In a simple Rankine cycle, feedwater heating from state 2 to 2’ occurs at a much lower average temperature than the vaporisation process from 2’ to 3. Consequently, the average temperature at which heat is supplied is lower than in the corresponding Carnot cycle, and the Rankine cycle efficiency is therefore less than that of the Carnot cycle.\n\n\n\nRelationship between Carnot cycle and Rankine cycle\n\n\nIn the regenerative cycle, feedwater enters the boiler at a point between states 2 and 2’, raising the average temperature at which heat is supplied and thus improving efficiency.\n\n\n\nRegenerative cycle",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#plant-thermal-efficiency",
+    "href": "power_plant_efficiency.html#plant-thermal-efficiency",
+    "title": "3  Power Plant Efficiency",
+    "section": "3.4 Plant Thermal Efficiency",
+    "text": "3.4 Plant Thermal Efficiency\nTo calculate the overall plant thermal efficiency, the heat added in the reheater sections of the boiler must be included:\n\\[\\eta_{\\text{thermal}} = \\frac{W_{\\text{Turbines}} - W_{\\text{Pumps}}}{Q_{\\text{boiler}} + Q_{\\text{Reheat1}} + Q_{\\text{Reheat2}}}\\]\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nRun the initial condition I10 230 MW_oil_auto and complete the following:\n\nDraw a T–S diagram of the Rankine cycle (not to scale) including reheat and regeneration.\nUsing the Trend Group Directory, collect the relevant process values.\nCalculate the overall thermal efficiency of the plant under three conditions:\n\nNormal conditions,\nHigh cooling water temperature — set Variable List Page 0100, tag T00305 to 35°C,\nNo regeneration — close all steam extraction valves and set T00305 to 10°C.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#hints-tips",
+    "href": "power_plant_efficiency.html#hints-tips",
+    "title": "3  Power Plant Efficiency",
+    "section": "3.5 Hints & Tips",
+    "text": "3.5 Hints & Tips\nThe following tags must be logged in your trends:\n\n\n\nTag\nDescription\n\n\n\n\nQ02395\nReheater 1 transferred heat\n\n\nQ02375\nReheater 2 transferred heat\n\n\n\n\nFor Boiler Feedwater Inlet Temperature, use the Startup Heat Exchanger Feedwater Outlet Temperature (tag T02447).\nFor the third calculation, make sure you closed all steam extraction valves and set T00305 to 10°C:\nTo calculate enthalpy values, use a steam tables app or an onlinesuperheated steam table.\n\n\n\n\nLake water temperature setting\n\n\n\n\n\nNo steam extraction\n\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nT–S Diagram — As per the lab instructions above.\nTrend Plots — Supply all plots taken during the lab.\nComputation — Calculate the overall thermal efficiency of the plant under each of the three conditions.\nConclusion — A summary (maximum 500 words) comparing your results and suggesting areas for further study.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "power_plant_efficiency.html#further-reading",
+    "href": "power_plant_efficiency.html#further-reading",
+    "title": "3  Power Plant Efficiency",
+    "section": "3.6 Further Reading",
+    "text": "3.6 Further Reading\n\nApplied Thermodynamics for Engineering Technologists — Steam Plant. (Eastop and McConkey 1993)\nFundamentals of Classical Thermodynamics (SI Version) — Vapour Power Cycles. (Wylen and Sonntag 1986)\nThermodynamics and Heat Power — Vapour Power Cycles. (Granet and Bluestein 2015)\n\n\n\n\n\nEastop, Thomas D., and Allen McConkey. 1993. Applied Thermodynamics for Engineering Technologists. 5th ed. Longman.\n\n\nGranet, Irving, and Maurice Bluestein. 2015. Thermodynamics and Heat Power. CRC Press.\n\n\nWylen, Gordon J. Van, and Richard E. Sonntag. 1986. Fundamentals of Classical Thermodynamics. Wiley.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
+    ]
+  },
+  {
+    "objectID": "nox_emissions.html",
+    "href": "nox_emissions.html",
+    "title": "4  NOx Emissions",
+    "section": "",
+    "text": "4.1 Theory\nCombustion of coal generates considerable quantities of byproducts, some of which are considered pollutants. The byproducts are mostly water vapour, carbon dioxide, and nitrogen — all readily found in the atmosphere — and do not necessarily pose a direct health hazard. However, because of the large quantities of coal combusted, even small concentrations of pollutants in the flue gas translate into large absolute quantities of hazardous emissions. The main pollutants that can cause health problems are sulfur oxides, nitrogen oxides, particulate matter, and trace elements such as arsenic, lead, and mercury.\nDuring combustion in a coal-fired power plant, nitrogen present in both the coal and the combustion air is converted into nitric oxide (NO) and nitrogen dioxide (NO2). These nitrogen oxides are collectively referred to as NOx. NOx emissions contribute to the formation of acid rain.\nNOx is primarily formed by two mechanisms:\nThe most effective strategies to minimize NOx formation are to reduce flame temperature, reduce excess oxygen, and/or burn fuels with a low nitrogen content.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>NO~x~ Emissions</span>"
+    ]
+  },
+  {
+    "objectID": "nox_emissions.html#theory",
+    "href": "nox_emissions.html#theory",
+    "title": "4  NOx Emissions",
+    "section": "",
+    "text": "Thermal NOx — formed at high flame temperatures; its formation rate increases exponentially with combustion temperature.\nFuel-bound NOx — dependent on the nitrogen content of the fuel.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>NO~x~ Emissions</span>"
+    ]
+  },
+  {
+    "objectID": "nox_emissions.html#the-denox-plant",
+    "href": "nox_emissions.html#the-denox-plant",
+    "title": "4  NOx Emissions",
+    "section": "4.2 The DeNOx Plant",
+    "text": "4.2 The DeNOx Plant\nThe purpose of the DeNOx plant is to remove nitrogen oxides from the flue gases using selective catalytic reduction (SCR). The reducing agent is ammonia gas. The plant comprises two SCR reactors and an ash silo; various dampers channel flue gases either into or around (bypassing) the SCR reactors.\n\n4.2.1 Operation\nThe DeNOx plant is highly automated and controlled by Programmable Logic Control (PLC) sequences:\n\n\n\nSequence\nFunction\n\n\n\n\nS701\nPurge\n\n\nS702 / S703\nStart / Stop Reactors\n\n\nS704 / S705\nHeating of Reactors\n\n\nS706 / S707\nAmmonia Injection\n\n\nS708 / S709\nProduct Handling\n\n\nS710 / S711\nSoot Blowing\n\n\n\n\n\n4.2.2 Over-Fire Air (OFA)\nTo reduce NOx, a quantity of additional air is supplied above all burner planes. This over-fire air (OFA) promotes a fuel-rich mixture in the high-temperature combustion zone at the burners (two-step combustion), thereby reducing NOx formation. Approximately 10% of the total combustion air is supplied as OFA. OFA controller failure (MD200 malfunction 0881) is modeled in the simulator.\n\n\n4.2.3 Over-Burner Air (OBA)\nTo further reduce NOx generation, a portion of the secondary air is split from the main duct and directed into a third channel immediately above the burner. The damper controlling this stream is abbreviated OBA. OBA controller failure (MD180 malfunction 0780) is modeled in the simulator.\n\n\n4.2.4 Fuel Quality\nIn the simulator, the chemical composition of the coal or other fuels can be specified. The five elemental components — C, H, S, O, and N — should preferably sum to 100%; however, this is not strictly required, as the values are always normalized to a 100% basis before use in further computations. Water content and inert matter (ash/slag) are specified separately. Water content varies considerably and has a significant impact on the preheating requirement for primary air.\nThe simulator computes the lower heating value (accounting for water and inert matter), the theoretical combustion air required, and the flue gas produced. Air and flue gas quantities are reported in ncm/kg (normal cubic metres per kilogram).\nFuel data can be modified using Variable List page 0111 on MD180.\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nRun the initial condition I14 80% Coal and set up trends for the following variables:\nG02197  X17821  G17107  X17106  D17104\nT17103  C08444  G08444  G08443  C08400\n\nStable operation — After 5 minutes of stable operation, freeze the simulator and print both trend windows. This serves as the reference point for all subsequent steps.\nOFA damper failure — Switch to run mode and activate malfunction 0881 on MD200. After 5 minutes, freeze the simulator and print both trends. Deactivate the malfunction before proceeding.\nOBA control failure — Switch to run mode and activate malfunction 0780 on MD180. After 5 minutes, freeze the simulator and print both trends. Deactivate the malfunction before proceeding.\nBurning poor quality fuel — Switch to run mode and access Variable List page 0111 on MD180. Enter the following values, then wait 5 minutes before freezing the simulator and printing both trends.\n\n\n\nTag\nValue\n\n\n\n\nX00820\n70.40\n\n\nX00821\n5.10\n\n\nX00822\n1.10\n\n\nX00823\n12.50\n\n\nX00824\n1.60\n\n\nX00825\n9.30\n\n\n\nDeNOx plant bypassed — Switch to run mode and bypass SCR 1 and SCR 2 on MD710 and MD720 respectively. After 5 minutes, freeze the simulator and print both trends.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>NO~x~ Emissions</span>"
+    ]
+  },
+  {
+    "objectID": "nox_emissions.html#hints-tips",
+    "href": "nox_emissions.html#hints-tips",
+    "title": "4  NOx Emissions",
+    "section": "4.3 Hints & Tips",
+    "text": "4.3 Hints & Tips\n\nEnsure all trend printouts are labeled clearly; unlabeled plots make data analysis very difficult.\nTabulate your collected data in a table matching the format shown in the lab manual.\n\nPercentage deviation is defined as:\n\\[\\text{Percentage deviation} = \\frac{\\text{Current Value} - \\text{Reference Value}}{\\text{Reference Value}} \\times 100\\%\\]\nTabulate the percentage deviation for each operating condition alongside the raw measured values.\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nTrend plots — All plots taken during the lab, clearly labeled for each operating condition.\nComputation — Calculate the percentage deviation for each condition, and plot your results.\nConclusion — A summary (maximum 500 words) comparing your results across operating conditions and suggesting areas for further study.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>NO~x~ Emissions</span>"
+    ]
+  },
+  {
+    "objectID": "nox_emissions.html#further-reading",
+    "href": "nox_emissions.html#further-reading",
+    "title": "4  NOx Emissions",
+    "section": "4.4 Further Reading",
+    "text": "4.4 Further Reading\n\nBCIT. Thermal Power Plant Simulator Course Manual — The DeNOx Plant.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>NO~x~ Emissions</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html",
+    "href": "heat_exchangers.html",
+    "title": "5  Heat Exchangers",
+    "section": "",
+    "text": "5.1 Theory\nA heat exchanger is equipment in which heat exchange takes place between two working media that enter and exit at different temperatures. Its main function is either to remove heat from a hot working medium or to add heat to a cold working medium. Depending on the direction of fluid flow, a heat exchanger is classified as either a parallel (concurrent) flow or a counter flow heat exchanger.\nIn a parallel flow heat exchanger, both fluids enter at the same end, so their largest temperature difference occurs at the inlet. The temperature difference decreases progressively along the length of the exchanger. In a counter flow heat exchanger, fluids enter at opposite ends, so the temperature difference between the two fluids remains relatively constant along the length of the exchanger.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#heat-transfer-equations",
+    "href": "heat_exchangers.html#heat-transfer-equations",
+    "title": "5  Heat Exchangers",
+    "section": "5.2 Heat Transfer Equations",
+    "text": "5.2 Heat Transfer Equations\nThe heat transferred by the hot and cold streams is given by:\n\\[Q_{\\text{hot}} = \\dot{m}_{\\text{hot}}\\, c_{p,\\text{hot}}\\, \\Delta T_{\\text{hot}}\\]\n\\[Q_{\\text{cold}} = \\dot{m}_{\\text{cold}}\\, c_{p,\\text{cold}}\\, \\Delta T_{\\text{cold}}\\]\nNewton’s Law of Cooling states that the rate of heat loss is proportional to the temperature difference between the body and its surroundings:\n\\[Q = \\alpha \\cdot A \\cdot \\Delta T\\]\nwhere \\(\\alpha\\) is the heat transfer coefficient [W/m²·K], \\(A\\) is the surface area [m²], and \\(\\Delta T\\) is the temperature difference [K].\nMore generally, the heat transferred between the hot and cold streams can be written as:\n\\[Q = \\frac{F \\cdot \\Delta T_{\\text{LMTD}}}{R_T}\\]\nor equivalently:\n\\[Q = F \\cdot (UA) \\cdot \\Delta T_{\\text{LMTD}}\\]\nwhere \\(F\\) is the correction factor (equal to 1 for this SIMLAB; typically between 0.5 and 1), \\(R_T\\) is the overall thermal resistance, \\(U\\) is the overall heat transfer coefficient, and \\(\\Delta T_{\\text{LMTD}}\\) is the Log Mean Temperature Difference.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#overall-thermal-resistance",
+    "href": "heat_exchangers.html#overall-thermal-resistance",
+    "title": "5  Heat Exchangers",
+    "section": "5.3 Overall Thermal Resistance",
+    "text": "5.3 Overall Thermal Resistance\nThe overall thermal resistance is the sum of three resistances in series:\n\\[R_T = R_{hf} + R_w + R_{cf}\\]\n\\[R_{hf} = \\frac{1}{A_1\\, \\alpha_h}\\]\n\\[R_w = \\frac{\\ln\\!\\left(\\dfrac{D_2}{D_1}\\right)}{2\\pi L\\, \\lambda_w}\\]\n\\[R_{cf} = \\frac{1}{A_2\\, \\alpha_c}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#heat-transfer-coefficients",
+    "href": "heat_exchangers.html#heat-transfer-coefficients",
+    "title": "5  Heat Exchangers",
+    "section": "5.4 Heat Transfer Coefficients",
+    "text": "5.4 Heat Transfer Coefficients\nThe local heat transfer coefficients \\(\\alpha_h\\) and \\(\\alpha_c\\) are obtained from the Nusselt number correlations below.\nFor the hot (cooling) side:\n\\[\\alpha_h = \\frac{Nu_h\\, \\lambda_h}{D_h}, \\qquad Nu_h = 0.3\\, Re_h^{0.8}\\, Pr_h^{0.3}\\]\nFor the cold (heating) side:\n\\[\\alpha_c = \\frac{Nu_c\\, \\lambda_c}{D_c}, \\qquad Nu_c = 0.3\\, Re_c^{0.8}\\, Pr_c^{0.3}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#log-mean-temperature-difference",
+    "href": "heat_exchangers.html#log-mean-temperature-difference",
+    "title": "5  Heat Exchangers",
+    "section": "5.5 Log Mean Temperature Difference",
+    "text": "5.5 Log Mean Temperature Difference\nThe LMTD is defined in terms of the temperature differences at each end (subscripts 1 and 2) of the heat exchanger:\n\\[\\Delta T_{\\text{LMTD}} = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln\\!\\left(\\dfrac{\\Delta T_1}{\\Delta T_2}\\right)}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#heat-exchanger-effectiveness",
+    "href": "heat_exchangers.html#heat-exchanger-effectiveness",
+    "title": "5  Heat Exchangers",
+    "section": "5.6 Heat Exchanger Effectiveness",
+    "text": "5.6 Heat Exchanger Effectiveness\nEffectiveness differs from efficiency: efficiency concerns minimising waste, whereas effectiveness concerns maximising output. Heat exchanger effectiveness is defined as the ratio of the actual heat transfer rate to the maximum possible heat transfer rate for the given inlet temperatures:\n\\[\\varepsilon = \\frac{Q}{Q_{\\max}}\\]\n\\[Q_{\\max} = C_{\\min}\\,(T_{h,i} - T_{c,i})\\]\nwhere \\(C_{\\min}\\) is the smaller of the two fluid heat capacity rates:\n\\[C_h = \\dot{m}_h\\, c_{p,h}, \\qquad C_c = \\dot{m}_c\\, c_{p,c}\\]\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nRun the initial condition I10 230 MW_oil_auto and set up trends for the following variables:\n\n\n\nVariable\nTag\n\n\n\n\nHeat Area Factor\nC34201\n\n\n\\(Q\\)\nQ34228\n\n\n\\(T_{\\text{cold},1}\\)\nT24214\n\n\n\\(T_{\\text{cold},2}\\)\nT34214\n\n\n\\(\\dot{m}_{\\text{cold}}\\)\nG34213\n\n\n\\(T_{\\text{hot},1}\\)\nT34204\n\n\n\\(T_{\\text{hot},2}\\)\nT34227\n\n\n\\(\\dot{m}_{\\text{hot}}\\)\nG34203\n\n\n\n\nHeat Area Factor = 0.5 — Using MD420 and Variable List 4210, set C34201 to 0.5. Run the simulator for 15 minutes, then freeze and print both trends.\nHeat Area Factor = 1.0 — Set C34201 to 1.0 (the default value for the heat transfer coefficient × area product). Run the simulator for 15 minutes, then freeze and print both trends.\nHeat Area Factor = 1.5 — Set C34201 to 1.5. Run the simulator for 15 minutes, then freeze and print both trends.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#hints-tips",
+    "href": "heat_exchangers.html#hints-tips",
+    "title": "5  Heat Exchangers",
+    "section": "5.7 Hints & Tips",
+    "text": "5.7 Hints & Tips\n\nLabel all trend printouts with descriptive names; unlabeled plots make comparison very difficult.\nYou are varying the Heat Area Factor (\\(U \\cdot A\\)) of LP Feed Heater 3 across three levels and comparing the resulting temperature profiles.\nYour evaluation will be based on the computed LMTD and Heat Exchanger Effectiveness (\\(\\varepsilon\\)) values for each test.\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nTrend plots — All plots taken during the lab, clearly labelled for each Heat Area Factor setting.\nComputation — Use MATLAB or MS Excel to calculate the LMTD and heat exchanger effectiveness for each of the three tests.\nConclusion — A summary (maximum 500 words) comparing your results across the three settings and suggesting areas for further study.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "heat_exchangers.html#further-reading",
+    "href": "heat_exchangers.html#further-reading",
+    "title": "5  Heat Exchangers",
+    "section": "5.8 Further Reading",
+    "text": "5.8 Further Reading\n\nApplied Thermodynamics for Engineering Technologists — Heat Transfer. (Eastop and McConkey 1993)\n\n\n\n\n\nEastop, Thomas D., and Allen McConkey. 1993. Applied Thermodynamics for Engineering Technologists. 5th ed. Longman.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Heat Exchangers</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html",
+    "href": "combustion_analysis.html",
+    "title": "6  Combustion Analysis",
+    "section": "",
+    "text": "6.1 Theory\nIn Chapter 1, combustion efficiency was defined as the ratio of the burner’s capability to burn fuel completely to the unburned fuel and excess air in the exhaust. In this lab, we carry out a full combustion analysis.\nFossil fuels may be classified as solid, liquid, or gaseous. The vast majority are based on carbon (C), hydrogen (H2), or some combination of the two called hydrocarbons. During combustion, oxygen (O2) combines rapidly with C, H2, sulphur (S), and their compounds, releasing energy. Except for special high-temperature applications (e.g. oxyacetylene welding), the O2 required for combustion is obtained from air.\nFor engineering purposes, air is considered to have the following composition by mass:\nThe proportions in which elements enter the combustion reaction depend on their relative molecular weights:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#theory",
+    "href": "combustion_analysis.html#theory",
+    "title": "6  Combustion Analysis",
+    "section": "",
+    "text": "Component\nMass fraction\n\n\n\n\nO2\n23%\n\n\nN2\n77%\n\n\n\n\n\n\n\nElement\nSymbol\nMolecular Weight\n\n\n\n\nCarbon\nC\n12\n\n\nSulphur\nS\n32\n\n\nHydrogen\nH2\n2\n\n\nOxygen\nO2\n32\n\n\nNitrogen\nN2\n28",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#stoichiometric-combustion-theory",
+    "href": "combustion_analysis.html#stoichiometric-combustion-theory",
+    "title": "6  Combustion Analysis",
+    "section": "6.2 Stoichiometric Combustion Theory",
+    "text": "6.2 Stoichiometric Combustion Theory\nComplete combustion of a simple hydrocarbon fuel produces carbon dioxide (CO2) from the carbon and water (H2O) from the hydrogen. For a hydrocarbon fuel of general composition CnHm, the combustion equation on a molar basis is:\n\\[\\text{C}_n\\text{H}_m + y\\,\\text{O}_2 \\rightarrow a\\,\\text{CO}_2 + b\\,\\text{H}_2\\text{O}\\]\nThe element balances are:\nCarbon balance: \\[a = n \\quad \\text{[kmol CO}_2\\text{/kmol fuel]}\\]\nHydrogen balance: \\[2b = m \\implies b = \\frac{m}{2} \\quad \\text{[kmol H}_2\\text{O/kmol fuel]}\\]\nOxygen balance: \\[2y = 2a + b \\implies y = a + \\frac{b}{2} \\quad \\text{[kmol O}_2\\text{/kmol fuel]}\\]\nIn practice, combustion occurs in air rather than pure oxygen. Nitrogen in the air may react to produce nitrogen oxides, and fuels often contain elements other than carbon and hydrogen. Furthermore, combustion is rarely complete — exhaust gases may contain unburned or partially burned products in addition to CO2 and H2O.\nFor further calculations, air is treated as a mixture of 21 mol% O2 and 79 mol% N2, with nitrogen acting as an inert gas. The stoichiometric combustion equation for CnHm in air then becomes:\n\\[\\text{C}_n\\text{H}_m + y\\!\\left(\\text{O}_2 + \\frac{79}{21}\\,\\text{N}_2\\right) \\rightarrow a\\,\\text{CO}_2 + b\\,\\text{H}_2\\text{O} + c\\,\\text{N}_2\\]\nwith the additional nitrogen balance:\nNitrogen balance: \\[c = y\\,\\frac{79}{21} \\quad \\text{[kmol N}_2\\text{/kmol fuel]}\\]\nFlue gas compositions are expressed as mole fractions in kmol of product per kmol of fuel.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#worked-example-combustion-of-octane-in-air",
+    "href": "combustion_analysis.html#worked-example-combustion-of-octane-in-air",
+    "title": "6  Combustion Analysis",
+    "section": "6.3 Worked Example: Combustion of Octane in Air",
+    "text": "6.3 Worked Example: Combustion of Octane in Air\nDetermine the stoichiometric air/fuel mass ratio and product gas composition for combustion of octane (C8H18) in air.\n\\[\\text{C}_8\\text{H}_{18} + y\\!\\left(\\text{O}_2 + \\frac{79}{21}\\,\\text{N}_2\\right) \\rightarrow a\\,\\text{CO}_2 + b\\,\\text{H}_2\\text{O} + c\\,\\text{N}_2\\]\nCarbon balance: \\[a = 8 \\quad \\text{[kmol CO}_2\\text{/kmol fuel]}\\]\nHydrogen balance: \\[b = \\frac{18}{2} = 9 \\quad \\text{[kmol H}_2\\text{O/kmol fuel]}\\]\nOxygen balance: \\[y = 8 + \\frac{9}{2} = 12.5 \\quad \\text{[kmol O}_2\\text{/kmol fuel]}\\]\nNitrogen balance: \\[c = 12.5 \\times \\frac{79}{21} = 47 \\quad \\text{[kmol N}_2\\text{/kmol fuel]}\\]\nThe balanced combustion equation is:\n\\[\\text{C}_8\\text{H}_{18} + 12.5\\!\\left(\\text{O}_2 + \\frac{79}{21}\\,\\text{N}_2\\right) \\rightarrow 8\\,\\text{CO}_2 + 9\\,\\text{H}_2\\text{O} + 47\\,\\text{N}_2\\]\nAir/fuel mass ratio — the molar mass of octane is \\(8(12) + 18(1) = 114\\) kg/kmol:\n\\[\\frac{12.5\\ \\text{kmol O}_2}{\\text{kmol fuel}}\n\\times \\frac{1\\ \\text{kmol fuel}}{114\\ \\text{kg fuel}}\n\\times \\frac{32\\ \\text{kg O}_2}{\\text{kmol O}_2}\n\\times \\frac{100\\ \\text{kg air}}{23\\ \\text{kg O}_2}\n= 15.25\\ \\frac{\\text{kg air}}{\\text{kg fuel}}\\]\nFlue gas composition (molar basis):\nTotal kmol of flue gas = \\(8 + 9 + 47 = 64\\) kmol/kmol fuel\n\n\n\nSpecies\nMole fraction\n\n\n\n\nCO2\n\\(8/64 = 12.5\\%\\)\n\n\nH2O\n\\(9/64 = 14.1\\%\\)\n\n\nN2\n\\(47/64 = 73.4\\%\\)\n\n\n\nOther fuel impurities complicate the calculation. Sulphur, for instance, typically combusts to sulphur dioxide (SO2). Ash — the noncombustible inorganic mineral content of the fuel — is assumed inert and is neglected in the calculations below.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#mass-based-combustion-chemistry",
+    "href": "combustion_analysis.html#mass-based-combustion-chemistry",
+    "title": "6  Combustion Analysis",
+    "section": "6.4 Mass-Based Combustion Chemistry",
+    "text": "6.4 Mass-Based Combustion Chemistry\nFor solid and liquid fuels, composition is usually reported on a mass basis from an ultimate analysis. The stoichiometric combustion reactions, written using molecular weights, are:\nCarbon: \\[\\text{C} + \\text{O}_2 \\rightarrow \\text{CO}_2\n\\quad\\Longrightarrow\\quad\n12 + 32 = 44\n\\quad\\Longrightarrow\\quad\n1\\ \\text{kg C} + 2\\tfrac{2}{3}\\ \\text{kg O}_2 = 3\\tfrac{2}{3}\\ \\text{kg CO}_2\\]\nHydrogen: \\[2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}\n\\quad\\Longrightarrow\\quad\n4 + 32 = 36\n\\quad\\Longrightarrow\\quad\n1\\ \\text{kg H}_2 + 8\\ \\text{kg O}_2 = 9\\ \\text{kg H}_2\\text{O}\\]\nSulphur: \\[\\text{S} + \\text{O}_2 \\rightarrow \\text{SO}_2\n\\quad\\Longrightarrow\\quad\n32 + 32 = 64\n\\quad\\Longrightarrow\\quad\n1\\ \\text{kg S} + 1\\ \\text{kg O}_2 = 2\\ \\text{kg SO}_2\\]\nSince air contains 23.2% O2 by mass, 1 kg of O2 is contained in \\(1/0.232 = 4.3\\) kg of air (the stoichiometric mass of air), which in turn contains \\(4.3 - 1 = 3.3\\) kg of N2. For sulphur combustion in air:\n\\[1\\ \\text{kg S} + 4.3\\ \\text{kg air} \\rightarrow 2\\ \\text{kg SO}_2 + 3.3\\ \\text{kg N}_2\\]",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#procedure",
+    "href": "combustion_analysis.html#procedure",
+    "title": "6  Combustion Analysis",
+    "section": "6.5 Procedure",
+    "text": "6.5 Procedure\nWhen fuel composition is given on a mass basis, follow these steps:\n\nTotal O2 required — Determine the mass of O2 required to combust each constituent and sum the results. Subtract any O2 already present in the fuel.\nStoichiometric air: \\[\\dot{m}_{\\text{air, stoich}} = \\frac{\\dot{m}_{\\text{O}_2\\text{, required}}}{0.232}\\]\nTotal mass of combustion products — Calculate the mass of each product. For example, for a carbon content of 84.9%: \\[m_{\\text{CO}_2} = \\frac{84.9}{100} \\times 3\\tfrac{2}{3} = 3.11\\ \\text{kg CO}_2\\text{/kg fuel}\\] Sum all product masses to obtain the total.\nCombustion product analysis by mass — Express each product as a percentage of the total flue gas mass. For example, if the total flue gas mass is 12.09 kg/kg fuel: \\[x_{\\text{CO}_2} = \\frac{3.11}{12.09} \\times 100 = 25.7\\%\\] Repeat for each constituent (H2O, SO2, N2).\n\n\n\n\n\n\n\nTipLab Instructions\n\n\n\nRun the initial condition I14 80% Coal and set up trends for the following variables:\nX00820  X00821  X00822  X00823  X00824  E23356\nG02196  G02197  X32419  X02419  G00831  H00830\n\nBurning default coal — After 10 minutes of stable operation, freeze the simulator and print both trends. This serves as the reference point for the next step.\nBurning poor quality coal — Switch to run mode and access Variable List page 0111 on MD180. Enter the values below, then run for 10 minutes before freezing and printing both trends.\n\n\n\nTag\nValue\n\n\n\n\nX00820\n70.40\n\n\nX00821\n5.10\n\n\nX00822\n1.10\n\n\nX00823\n12.50\n\n\nX00824\n1.60\n\n\nX00825\n9.30\n\n\n\nComputation — For both fuel types, calculate:\n\nTotal O2 required,\nStoichiometric air,\nTotal mass of combustion products,\nMass percentage of each combustion product: CO2, H2O, SO2, N2.\n\nComparison — Compare your findings for the two fuels using the following simulator outputs:\n\nFurnace outlet SOx flow,\nFurnace outlet NOx flow,\nCO content in flue gas,\nO2 content in flue gas,\nTheoretical combustion air,\nCoal heat value.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#hints-tips",
+    "href": "combustion_analysis.html#hints-tips",
+    "title": "6  Combustion Analysis",
+    "section": "6.6 Hints & Tips",
+    "text": "6.6 Hints & Tips\n\nLabel all trend printouts clearly for each fuel; unlabeled plots make comparison very difficult.\nTo change the fuel composition, use Variable List page 0111 on MD180.\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nTrend plots — All plots taken for each of the two fuels, clearly labeled.\nComputation — Combustion analyses for both fuels performed in MATLAB or MS Excel, as per the procedure above.\nConclusion — A summary (maximum 500 words) comparing your results for the two fuel types and suggesting areas for further study.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "combustion_analysis.html#further-reading",
+    "href": "combustion_analysis.html#further-reading",
+    "title": "6  Combustion Analysis",
+    "section": "6.7 Further Reading",
+    "text": "6.7 Further Reading\n\nBasic Engineering Thermodynamics in SI Units — Combustion. (Joel 1996)\nThermal Engineering — Fossil Fuels and Their Combustion. (Solberg, n.d.)\nWikipedia. Stoichiometry.\n\n\n\n\n\nJoel, Rayner. 1996. Basic Engineering Thermodynamics. 5th ed. Pearson/Prenctice Hall.\n\n\nSolberg, H. L. n.d. Thermal Engineering. John Wiley & Sons Inc.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combustion Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Eastop, Thomas D., and Allen McConkey. 1993. Applied Thermodynamics\nfor Engineering Technologists. 5th ed. Longman.\n\n\nGranet, Irving, and Maurice Bluestein. 2015. Thermodynamics and Heat\nPower. CRC Press.\n\n\nJoel, Rayner. 1996. Basic Engineering Thermodynamics. 5th ed.\nPearson/Prenctice Hall.\n\n\nSolberg, H. L. n.d. Thermal Engineering. John Wiley & Sons\nInc.\n\n\nWylen, Gordon J. Van, and Richard E. Sonntag. 1986. Fundamentals of\nClassical Thermodynamics. Wiley.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

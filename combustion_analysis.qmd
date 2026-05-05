@@ -1,0 +1,196 @@
+# Combustion Analysis {#sec-combustion_analysis}
+
+::: callout-note
+## Learning Objectives
+
+Operate the Plant at 80% capacity burning coal to:
+
+- Perform combustion analyses for two types of coal,
+- Compare results.
+:::
+
+## Theory
+
+In @sec-boiler_efficiency, combustion efficiency was defined as the ratio of the burner's capability to burn fuel completely to the unburned fuel and excess air in the exhaust. In this lab, we carry out a full combustion analysis.
+
+Fossil fuels may be classified as solid, liquid, or gaseous. The vast majority are based on carbon (C), hydrogen (H~2~), or some combination of the two called hydrocarbons. During combustion, oxygen (O~2~) combines rapidly with C, H~2~, sulphur (S), and their compounds, releasing energy. Except for special high-temperature applications (e.g. oxyacetylene welding), the O~2~ required for combustion is obtained from air.
+
+For engineering purposes, air is considered to have the following composition by mass:
+
+| Component | Mass fraction |
+|-----------|---------------|
+| O~2~      | 23%           |
+| N~2~      | 77%           |
+
+The proportions in which elements enter the combustion reaction depend on their relative molecular weights:
+
+| Element  | Symbol | Molecular Weight |
+|----------|--------|------------------|
+| Carbon   | C      | 12               |
+| Sulphur  | S      | 32               |
+| Hydrogen | H~2~   | 2                |
+| Oxygen   | O~2~   | 32               |
+| Nitrogen | N~2~   | 28               |
+
+## Stoichiometric Combustion Theory
+
+Complete combustion of a simple hydrocarbon fuel produces carbon dioxide (CO~2~) from the carbon and water (H~2~O) from the hydrogen. For a hydrocarbon fuel of general composition C~n~H~m~, the combustion equation\index{combustion equation} on a molar basis is:
+
+$$\text{C}_n\text{H}_m + y\,\text{O}_2 \rightarrow a\,\text{CO}_2 + b\,\text{H}_2\text{O}$$
+
+The element balances are:
+
+**Carbon balance:** $$a = n \quad \text{[kmol CO}_2\text{/kmol fuel]}$$
+
+**Hydrogen balance:** $$2b = m \implies b = \frac{m}{2} \quad \text{[kmol H}_2\text{O/kmol fuel]}$$
+
+**Oxygen balance:** $$2y = 2a + b \implies y = a + \frac{b}{2} \quad \text{[kmol O}_2\text{/kmol fuel]}$$
+
+In practice, combustion occurs in air rather than pure oxygen. Nitrogen in the air may react to produce nitrogen oxides, and fuels often contain elements other than carbon and hydrogen. Furthermore, combustion is rarely complete — exhaust gases may contain unburned or partially burned products in addition to CO~2~ and H~2~O.
+
+For further calculations, air is treated as a mixture of 21 mol% O~2~ and 79 mol% N~2~, with nitrogen acting as an inert gas. The stoichiometric combustion equation for C~n~H~m~ in air then becomes:
+
+$$\text{C}_n\text{H}_m + y\!\left(\text{O}_2 + \frac{79}{21}\,\text{N}_2\right) \rightarrow a\,\text{CO}_2 + b\,\text{H}_2\text{O} + c\,\text{N}_2$$
+
+with the additional nitrogen balance:
+
+**Nitrogen balance:** $$c = y\,\frac{79}{21} \quad \text{[kmol N}_2\text{/kmol fuel]}$$
+
+Flue gas compositions are expressed as mole fractions in kmol of product per kmol of fuel.
+
+## Worked Example: Combustion of Octane in Air
+
+Determine the stoichiometric air/fuel mass ratio and product gas composition for combustion of octane (C~8~H~18~) in air.
+
+$$\text{C}_8\text{H}_{18} + y\!\left(\text{O}_2 + \frac{79}{21}\,\text{N}_2\right) \rightarrow a\,\text{CO}_2 + b\,\text{H}_2\text{O} + c\,\text{N}_2$$
+
+**Carbon balance:** $$a = 8 \quad \text{[kmol CO}_2\text{/kmol fuel]}$$
+
+**Hydrogen balance:** $$b = \frac{18}{2} = 9 \quad \text{[kmol H}_2\text{O/kmol fuel]}$$
+
+**Oxygen balance:** $$y = 8 + \frac{9}{2} = 12.5 \quad \text{[kmol O}_2\text{/kmol fuel]}$$
+
+**Nitrogen balance:** $$c = 12.5 \times \frac{79}{21} = 47 \quad \text{[kmol N}_2\text{/kmol fuel]}$$
+
+The balanced combustion equation is:
+
+$$\text{C}_8\text{H}_{18} + 12.5\!\left(\text{O}_2 + \frac{79}{21}\,\text{N}_2\right) \rightarrow 8\,\text{CO}_2 + 9\,\text{H}_2\text{O} + 47\,\text{N}_2$$
+
+**Air/fuel mass ratio** — the molar mass of octane is $8(12) + 18(1) = 114$ kg/kmol:
+
+$$\frac{12.5\ \text{kmol O}_2}{\text{kmol fuel}}
+\times \frac{1\ \text{kmol fuel}}{114\ \text{kg fuel}}
+\times \frac{32\ \text{kg O}_2}{\text{kmol O}_2}
+\times \frac{100\ \text{kg air}}{23\ \text{kg O}_2}
+= 15.25\ \frac{\text{kg air}}{\text{kg fuel}}$$
+
+**Flue gas composition (molar basis):**
+
+Total kmol of flue gas = $8 + 9 + 47 = 64$ kmol/kmol fuel
+
+| Species | Mole fraction    |
+|---------|------------------|
+| CO~2~   | $8/64 = 12.5\%$  |
+| H~2~O   | $9/64 = 14.1\%$  |
+| N~2~    | $47/64 = 73.4\%$ |
+
+Other fuel impurities complicate the calculation. Sulphur, for instance, typically combusts to sulphur dioxide (SO~2~). Ash — the noncombustible inorganic mineral content of the fuel — is assumed inert and is neglected in the calculations below.
+
+## Mass-Based Combustion Chemistry
+
+For solid and liquid fuels, composition is usually reported on a mass basis from an ultimate analysis. The stoichiometric combustion reactions, written using molecular weights, are:
+
+**Carbon:** $$\text{C} + \text{O}_2 \rightarrow \text{CO}_2
+\quad\Longrightarrow\quad
+12 + 32 = 44
+\quad\Longrightarrow\quad
+1\ \text{kg C} + 2\tfrac{2}{3}\ \text{kg O}_2 = 3\tfrac{2}{3}\ \text{kg CO}_2$$
+
+**Hydrogen:** $$2\text{H}_2 + \text{O}_2 \rightarrow 2\text{H}_2\text{O}
+\quad\Longrightarrow\quad
+4 + 32 = 36
+\quad\Longrightarrow\quad
+1\ \text{kg H}_2 + 8\ \text{kg O}_2 = 9\ \text{kg H}_2\text{O}$$
+
+**Sulphur:** $$\text{S} + \text{O}_2 \rightarrow \text{SO}_2
+\quad\Longrightarrow\quad
+32 + 32 = 64
+\quad\Longrightarrow\quad
+1\ \text{kg S} + 1\ \text{kg O}_2 = 2\ \text{kg SO}_2$$
+
+Since air contains 23.2% O~2~ by mass, 1 kg of O~2~ is contained in $1/0.232 = 4.3$ kg of air (the **stoichiometric mass of air**), which in turn contains $4.3 - 1 = 3.3$ kg of N~2~. For sulphur combustion in air:
+
+$$1\ \text{kg S} + 4.3\ \text{kg air} \rightarrow 2\ \text{kg SO}_2 + 3.3\ \text{kg N}_2$$
+
+## Procedure
+
+When fuel composition is given on a mass basis, follow these steps:
+
+1.  **Total O~2~ required** — Determine the mass of O~2~ required to combust each constituent and sum the results. Subtract any O~2~ already present in the fuel.
+
+2.  **Stoichiometric air:** $$\dot{m}_{\text{air, stoich}} = \frac{\dot{m}_{\text{O}_2\text{, required}}}{0.232}$$
+
+3.  **Total mass of combustion products** — Calculate the mass of each product. For example, for a carbon content of 84.9%: $$m_{\text{CO}_2} = \frac{84.9}{100} \times 3\tfrac{2}{3} = 3.11\ \text{kg CO}_2\text{/kg fuel}$$ Sum all product masses to obtain the total.
+
+4.  **Combustion product analysis by mass** — Express each product as a percentage of the total flue gas mass. For example, if the total flue gas mass is 12.09 kg/kg fuel: $$x_{\text{CO}_2} = \frac{3.11}{12.09} \times 100 = 25.7\%$$ Repeat for each constituent (H~2~O, SO~2~, N~2~).
+
+::: callout-tip
+## Lab Instructions
+
+Run the initial condition **I14 80% Coal** and set up trends for the following variables:
+
+```         
+X00820  X00821  X00822  X00823  X00824  E23356
+G02196  G02197  X32419  X02419  G00831  H00830
+```
+
+1.  **Burning default coal** — After 10 minutes of stable operation, freeze the simulator and print both trends. This serves as the reference point for the next step.
+
+2.  **Burning poor quality coal** — Switch to run mode and access Variable List page 0111 on MD180. Enter the values below, then run for 10 minutes before freezing and printing both trends.
+
+    | Tag    | Value |
+    |--------|-------|
+    | X00820 | 70.40 |
+    | X00821 | 5.10  |
+    | X00822 | 1.10  |
+    | X00823 | 12.50 |
+    | X00824 | 1.60  |
+    | X00825 | 9.30  |
+
+3.  **Computation** — For both fuel types, calculate:
+
+    - Total O~2~ required,
+    - Stoichiometric air,
+    - Total mass of combustion products,
+    - Mass percentage of each combustion product: CO~2~, H~2~O, SO~2~, N~2~.
+
+4.  **Comparison** — Compare your findings for the two fuels using the following simulator outputs:
+
+    - Furnace outlet SO~x~ flow,
+    - Furnace outlet NO~x~ flow,
+    - CO content in flue gas,
+    - O~2~ content in flue gas,
+    - Theoretical combustion air,
+    - Coal heat value.
+:::
+
+## Hints & Tips
+
+- Label all trend printouts clearly for each fuel; unlabeled plots make comparison very difficult.
+- To change the fuel composition, use Variable List page 0111 on MD180.
+
+::: callout-important
+## Deliverables
+
+Your lab report must include the following:
+
+1.  **Trend plots** — All plots taken for each of the two fuels, clearly labeled.
+2.  **Computation** — Combustion analyses for both fuels performed in MATLAB or MS Excel, as per the procedure above.
+3.  **Conclusion** — A summary (maximum 500 words) comparing your results for the two fuel types and suggesting areas for further study.
+:::
+
+## Further Reading
+
+- *Basic Engineering Thermodynamics in SI Units* — Combustion. [@joel1996]
+- *Thermal Engineering* — Fossil Fuels and Their Combustion. [@solberg]
+- Wikipedia. [Stoichiometry](https://en.wikipedia.org/wiki/Stoichiometry).

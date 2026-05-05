@@ -1,0 +1,84 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Simulator Laboratory"
+  subtitle: "Thermodynamics and Thermal Power Plant Simulator"
+  author: Sanja Boskovic and Serhat Beyenir
+  date: last-modified # today or last-modified or "2026-04-30"
+  date-format: "D MMMM YYYY"
+  downloads: [pdf]
+
+  sidebar:
+    align: left
+    style: floating
+    collapse-level: 2
+    pinned: false
+
+  page-footer:
+    left: © 2026 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    right: |
+      Built with <a href="https://quarto.org">Quarto {{< version >}}</a>
+     
+  chapters:
+    - index.qmd
+    - boiler_efficiency.qmd
+    - turbine_efficiency.qmd
+    - power_plant_efficiency.qmd
+    - nox_emissions.qmd
+    - heat_exchangers.qmd
+    - combustion_analysis.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    toc-collapse: true
+    theme:
+      light: cosmo
+      dark: solar
+  pdf:
+    pdf-engine: xelatex
+    documentclass: book
+    code-overflow: wrap
+    toc: true
+    toc-title: Contents
+    number-sections: true
+    top-level-division: chapter
+    lot: false
+    lof: true
+    include-in-header:
+      text: |
+        \usepackage{longtable}
+        \usepackage{booktabs}
+        \usepackage{makeidx}
+        \usepackage{graphicx}
+        \makeindex
+        \usepackage{fontspec}
+        \setmonofont{Consolas}
+        \usepackage{titling}
+        \pretitle{\begin{center}\Huge\bfseries}
+        \posttitle{\par\end{center}\vspace{0.75em}}
+        \preauthor{\begin{center}\large}
+        \postauthor{\end{center}}
+        \predate{\begin{center}\large}
+        \postdate{%
+          \par\end{center}
+          \vspace*{\fill}
+          \begin{center}
+            {\small
+              This work is licensed under a Creative Commons
+              Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).\\[0.5em]
+              Full text available at
+              \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}.
+            }
+          \end{center}
+          \vspace*{1cm}
+        }
+    include-after-body:
+      text: |
+        \clearpage
+        \printindex

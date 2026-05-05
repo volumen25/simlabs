@@ -1,0 +1,122 @@
+# Heat Exchangers {#sec-heat_exchangers}
+
+::: callout-note
+## Learning Objective
+
+Operate the Plant at full generating capacity and study the effect of heat exchanger surface area using the Low Pressure Feed Heater 3.
+:::
+
+## Theory
+
+A heat exchanger is equipment in which heat exchange takes place between two working media that enter and exit at different temperatures. Its main function is either to remove heat from a hot working medium or to add heat to a cold working medium. Depending on the direction of fluid flow, a heat exchanger is classified as either a **parallel (concurrent) flow** or a **counter flow** heat exchanger.
+
+In a **parallel flow** heat exchanger, both fluids enter at the same end, so their largest temperature difference occurs at the inlet. The temperature difference decreases progressively along the length of the exchanger. In a **counter flow** heat exchanger, fluids enter at opposite ends, so the temperature difference between the two fluids remains relatively constant along the length of the exchanger.
+
+## Heat Transfer Equations
+
+The heat transferred by the hot and cold streams is given by:
+
+$$Q_{\text{hot}} = \dot{m}_{\text{hot}}\, c_{p,\text{hot}}\, \Delta T_{\text{hot}}$$
+
+$$Q_{\text{cold}} = \dot{m}_{\text{cold}}\, c_{p,\text{cold}}\, \Delta T_{\text{cold}}$$
+
+Newton's Law of Cooling\index{Newton's Law of Cooling} states that the rate of heat loss is proportional to the temperature difference between the body and its surroundings:
+
+$$Q = \alpha \cdot A \cdot \Delta T$$
+
+where $\alpha$ is the heat transfer coefficient \[W/m²·K\], $A$ is the surface area \[m²\], and $\Delta T$ is the temperature difference \[K\].
+
+More generally, the heat transferred between the hot and cold streams can be written as:
+
+$$Q = \frac{F \cdot \Delta T_{\text{LMTD}}}{R_T}$$
+
+or equivalently:
+
+$$Q = F \cdot (UA) \cdot \Delta T_{\text{LMTD}}$$
+
+where $F$ is the correction factor (equal to 1 for this SIMLAB; typically between 0.5 and 1), $R_T$ is the overall thermal resistance, $U$ is the overall heat transfer coefficient, and $\Delta T_{\text{LMTD}}$ is the Log Mean Temperature Difference.
+
+## Overall Thermal Resistance
+
+The overall thermal resistance is the sum of three resistances in series:
+
+$$R_T = R_{hf} + R_w + R_{cf}$$
+
+$$R_{hf} = \frac{1}{A_1\, \alpha_h}$$
+
+$$R_w = \frac{\ln\!\left(\dfrac{D_2}{D_1}\right)}{2\pi L\, \lambda_w}$$
+
+$$R_{cf} = \frac{1}{A_2\, \alpha_c}$$
+
+## Heat Transfer Coefficients
+
+The local heat transfer coefficients $\alpha_h$ and $\alpha_c$ are obtained from the Nusselt number correlations below.
+
+**For the hot (cooling) side:**
+
+$$\alpha_h = \frac{Nu_h\, \lambda_h}{D_h}, \qquad Nu_h = 0.3\, Re_h^{0.8}\, Pr_h^{0.3}$$
+
+**For the cold (heating) side:**
+
+$$\alpha_c = \frac{Nu_c\, \lambda_c}{D_c}, \qquad Nu_c = 0.3\, Re_c^{0.8}\, Pr_c^{0.3}$$
+
+## Log Mean Temperature Difference
+
+The LMTD is defined in terms of the temperature differences at each end (subscripts 1 and 2) of the heat exchanger:
+
+$$\Delta T_{\text{LMTD}} = \frac{\Delta T_1 - \Delta T_2}{\ln\!\left(\dfrac{\Delta T_1}{\Delta T_2}\right)}$$
+
+## Heat Exchanger Effectiveness
+
+Effectiveness differs from efficiency: efficiency concerns minimising waste, whereas effectiveness concerns maximising output. Heat exchanger effectiveness is defined as the ratio of the actual heat transfer rate to the maximum possible heat transfer rate for the given inlet temperatures:
+
+$$\varepsilon = \frac{Q}{Q_{\max}}$$
+
+$$Q_{\max} = C_{\min}\,(T_{h,i} - T_{c,i})$$
+
+where $C_{\min}$ is the smaller of the two fluid heat capacity rates:
+
+$$C_h = \dot{m}_h\, c_{p,h}, \qquad C_c = \dot{m}_c\, c_{p,c}$$
+
+::: callout-tip
+## Lab Instructions
+
+Run the initial condition **I10 230 MW_oil_auto** and set up trends for the following variables:
+
+| Variable                | Tag      |
+|-------------------------|----------|
+| Heat Area Factor        | `C34201` |
+| $Q$                     | `Q34228` |
+| $T_{\text{cold},1}$     | `T24214` |
+| $T_{\text{cold},2}$     | `T34214` |
+| $\dot{m}_{\text{cold}}$ | `G34213` |
+| $T_{\text{hot},1}$      | `T34204` |
+| $T_{\text{hot},2}$      | `T34227` |
+| $\dot{m}_{\text{hot}}$  | `G34203` |
+
+1.  **Heat Area Factor = 0.5** — Using MD420 and Variable List 4210, set `C34201` to **0.5**. Run the simulator for 15 minutes, then freeze and print both trends.
+
+2.  **Heat Area Factor = 1.0** — Set `C34201` to **1.0** (the default value for the heat transfer coefficient × area product). Run the simulator for 15 minutes, then freeze and print both trends.
+
+3.  **Heat Area Factor = 1.5** — Set `C34201` to **1.5**. Run the simulator for 15 minutes, then freeze and print both trends.
+:::
+
+## Hints & Tips
+
+- Label all trend printouts with descriptive names; unlabeled plots make comparison very difficult.
+- You are varying the Heat Area Factor ($U \cdot A$) of LP Feed Heater 3 across three levels and comparing the resulting temperature profiles.
+- Your evaluation will be based on the computed **LMTD** and **Heat Exchanger Effectiveness** ($\varepsilon$) values for each test.
+
+::: callout-important
+## Deliverables
+
+Your lab report must include the following:
+
+1.  **Trend plots** — All plots taken during the lab, clearly labelled for each Heat Area Factor setting.
+2.  **Computation** — Use MATLAB or MS Excel to calculate the LMTD and heat exchanger effectiveness for each of the three tests.
+3.  **Conclusion** — A summary (maximum 500 words) comparing your results across the three settings and suggesting areas for further study.
+:::
+
+## Further Reading
+
+- *Applied Thermodynamics for Engineering Technologists* — Heat Transfer. [@eastop1993]

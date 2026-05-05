@@ -1,0 +1,114 @@
+# NO~x~ Emissions {#sec-NOx_emissions}
+
+::: callout-note
+## Learning Objectives
+
+Operate the Plant at full generating capacity and compare the NO~x~ emissions when the plant is operating:
+
+- Under normal conditions,
+- During over-fire air damper failure,
+- During over-burner air control failure,
+- Burning poor quality fuel,
+- With the DeNO~x~ plant bypassed.
+:::
+
+## Theory
+
+Combustion of coal generates considerable quantities of byproducts, some of which are considered pollutants. The byproducts are mostly water vapour, carbon dioxide, and nitrogen — all readily found in the atmosphere — and do not necessarily pose a direct health hazard. However, because of the large quantities of coal combusted, even small concentrations of pollutants in the flue gas translate into large absolute quantities of hazardous emissions. The main pollutants that can cause health problems are sulfur oxides, nitrogen oxides, particulate matter, and trace elements such as arsenic, lead, and mercury.
+
+During combustion in a coal-fired power plant, nitrogen present in both the coal and the combustion air is converted into nitric oxide (NO) and nitrogen dioxide (NO~2~). These nitrogen oxides are collectively referred to as **NO~x~**. NO~x~ emissions contribute to the formation of acid rain.
+
+NO~x~ is primarily formed by two mechanisms:
+
+- **Thermal NO~x~** — formed at high flame temperatures; its formation rate increases exponentially with combustion temperature.
+- **Fuel-bound NO~x~** — dependent on the nitrogen content of the fuel.
+
+The most effective strategies to minimize NO~x~ formation are to reduce flame temperature, reduce excess oxygen, and/or burn fuels with a low nitrogen content.
+
+## The DeNO~x~ Plant
+
+The purpose of the DeNO~x~ plant\index{DeNOx plant} is to remove nitrogen oxides from the flue gases using **selective catalytic reduction (SCR)**. The reducing agent is ammonia gas. The plant comprises two SCR reactors and an ash silo; various dampers channel flue gases either into or around (bypassing) the SCR reactors.
+
+### Operation
+
+The DeNO~x~ plant is highly automated and controlled by Programmable Logic Control (PLC) sequences:
+
+| Sequence    | Function              |
+|-------------|-----------------------|
+| S701        | Purge                 |
+| S702 / S703 | Start / Stop Reactors |
+| S704 / S705 | Heating of Reactors   |
+| S706 / S707 | Ammonia Injection     |
+| S708 / S709 | Product Handling      |
+| S710 / S711 | Soot Blowing          |
+
+### Over-Fire Air (OFA)
+
+To reduce NO~x~, a quantity of additional air is supplied above all burner planes. This **over-fire air (OFA)** promotes a fuel-rich mixture in the high-temperature combustion zone at the burners (two-step combustion), thereby reducing NO~x~ formation. Approximately 10% of the total combustion air is supplied as OFA. OFA controller failure (MD200 malfunction 0881) is modeled in the simulator.
+
+### Over-Burner Air (OBA)
+
+To further reduce NO~x~ generation, a portion of the secondary air is split from the main duct and directed into a third channel immediately above the burner. The damper controlling this stream is abbreviated **OBA**. OBA controller failure (MD180 malfunction 0780) is modeled in the simulator.
+
+### Fuel Quality
+
+In the simulator, the chemical composition of the coal or other fuels can be specified. The five elemental components — C, H, S, O, and N — should preferably sum to 100%; however, this is not strictly required, as the values are always normalized to a 100% basis before use in further computations. Water content and inert matter (ash/slag) are specified separately. Water content varies considerably and has a significant impact on the preheating requirement for primary air.
+
+The simulator computes the lower heating value (accounting for water and inert matter), the theoretical combustion air required, and the flue gas produced. Air and flue gas quantities are reported in ncm/kg (normal cubic metres per kilogram).
+
+Fuel data can be modified using Variable List page 0111 on MD180.
+
+::: callout-tip
+## Lab Instructions
+
+Run the initial condition **I14 80% Coal** and set up trends for the following variables:
+
+```         
+G02197  X17821  G17107  X17106  D17104
+T17103  C08444  G08444  G08443  C08400
+```
+
+1.  **Stable operation** — After 5 minutes of stable operation, freeze the simulator and print both trend windows. This serves as the reference point for all subsequent steps.
+
+2.  **OFA damper failure** — Switch to run mode and activate malfunction **0881** on MD200. After 5 minutes, freeze the simulator and print both trends. Deactivate the malfunction before proceeding.
+
+3.  **OBA control failure** — Switch to run mode and activate malfunction **0780** on MD180. After 5 minutes, freeze the simulator and print both trends. Deactivate the malfunction before proceeding.
+
+4.  **Burning poor quality fuel** — Switch to run mode and access Variable List page 0111 on MD180. Enter the following values, then wait 5 minutes before freezing the simulator and printing both trends.
+
+    | Tag    | Value |
+    |--------|-------|
+    | X00820 | 70.40 |
+    | X00821 | 5.10  |
+    | X00822 | 1.10  |
+    | X00823 | 12.50 |
+    | X00824 | 1.60  |
+    | X00825 | 9.30  |
+
+5.  **DeNO~x~ plant bypassed** — Switch to run mode and bypass SCR 1 and SCR 2 on MD710 and MD720 respectively. After 5 minutes, freeze the simulator and print both trends.
+:::
+
+## Hints & Tips
+
+- Ensure all trend printouts are labeled clearly; unlabeled plots make data analysis very difficult.
+- Tabulate your collected data in a table matching the format shown in the lab manual.
+
+**Percentage deviation** is defined as:
+
+$$\text{Percentage deviation} = \frac{\text{Current Value} - \text{Reference Value}}{\text{Reference Value}} \times 100\%$$
+
+Tabulate the percentage deviation for each operating condition alongside the raw measured values.
+
+::: callout-important
+## Deliverables
+
+Your lab report must include the following:
+
+1.  **Trend plots** — All plots taken during the lab, clearly labeled for each operating condition.
+2.  **Computation** — Calculate the percentage deviation for each condition, and plot your results.
+3.  **Conclusion** — A summary (maximum 500 words) comparing your results across operating conditions and suggesting areas for further study.
+:::
+
+## Further Reading
+
+- BCIT. *Thermal Power Plant Simulator Course Manual* — The DeNO~x~ Plant.
