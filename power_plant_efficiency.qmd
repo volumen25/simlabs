@@ -14,7 +14,7 @@ Operate the Plant at full generating capacity and compute the Power Plant Effici
 
 Excluding hydroelectric power plants, most power generating plants employ a type of boiler and steam turbine. High-pressure steam leaves the boiler and enters the turbine. The steam expands in the turbine and does work which enables the turbine to drive the electric generator. The exhaust steam leaves the turbine and enters the condenser where heat is transferred from the steam to cooling water. The pressure of the condensate leaving the condenser is increased in the pump, thereby enabling the condensate to flow into the boiler. This thermodynamic cycle is known as the **Rankine Cycle**.
 
-![Schematic diagram of a steam power plant](figures/RankineCycle.jpg)
+![Simplified schematic of a steam power plant](figures/RankineCycle.jpg)
 
 ## The Rankine Cycle Efficiency
 
@@ -88,7 +88,7 @@ The following tags must be logged in your trends:
 
 - For **Boiler Feedwater Inlet Temperature**, use the Startup Heat Exchanger Feedwater Outlet Temperature (tag `T02447`).
 - For the third calculation, make sure you closed all steam extraction valves and set T00305 to 10°C:
-- To calculate enthalpy values, use a steam tables app or an [online](https://goo.gl/GdVM4U)superheated steam table.
+- To calculate enthalpy values, use a steam tables app or an [online](https://goo.gl/GdVM4U) superheated steam table.
 
 ![Lake water temperature setting](figures/LakeWaterTemp.jpg)
 

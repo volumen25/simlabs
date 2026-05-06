@@ -104,7 +104,7 @@
     "href": "power_plant_efficiency.html#theory",
     "title": "3  Power Plant Efficiency",
     "section": "",
-    "text": "Schematic diagram of a steam power plant",
+    "text": "Simplified schematic of a steam power plant",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "power_plant_efficiency.html#hints-tips",
     "title": "3  Power Plant Efficiency",
     "section": "3.5 Hints & Tips",
-    "text": "3.5 Hints & Tips\nThe following tags must be logged in your trends:\n\n\n\nTag\nDescription\n\n\n\n\nQ02395\nReheater 1 transferred heat\n\n\nQ02375\nReheater 2 transferred heat\n\n\n\n\nFor Boiler Feedwater Inlet Temperature, use the Startup Heat Exchanger Feedwater Outlet Temperature (tag T02447).\nFor the third calculation, make sure you closed all steam extraction valves and set T00305 to 10°C:\nTo calculate enthalpy values, use a steam tables app or an onlinesuperheated steam table.\n\n\n\n\nLake water temperature setting\n\n\n\n\n\nNo steam extraction\n\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nT–S Diagram — As per the lab instructions above.\nTrend Plots — Supply all plots taken during the lab.\nComputation — Calculate the overall thermal efficiency of the plant under each of the three conditions.\nConclusion — A summary (maximum 500 words) comparing your results and suggesting areas for further study.",
+    "text": "3.5 Hints & Tips\nThe following tags must be logged in your trends:\n\n\n\nTag\nDescription\n\n\n\n\nQ02395\nReheater 1 transferred heat\n\n\nQ02375\nReheater 2 transferred heat\n\n\n\n\nFor Boiler Feedwater Inlet Temperature, use the Startup Heat Exchanger Feedwater Outlet Temperature (tag T02447).\nFor the third calculation, make sure you closed all steam extraction valves and set T00305 to 10°C:\nTo calculate enthalpy values, use a steam tables app or an online superheated steam table.\n\n\n\n\nLake water temperature setting\n\n\n\n\n\nNo steam extraction\n\n\n\n\n\n\n\n\nImportantDeliverables\n\n\n\nYour lab report must include the following:\n\nT–S Diagram — As per the lab instructions above.\nTrend Plots — Supply all plots taken during the lab.\nComputation — Calculate the overall thermal efficiency of the plant under each of the three conditions.\nConclusion — A summary (maximum 500 words) comparing your results and suggesting areas for further study.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Power Plant Efficiency</span>"
     ]
