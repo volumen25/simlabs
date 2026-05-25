@@ -6,7 +6,7 @@ book:
   title: "Simulator Laboratory"
   subtitle: "Thermodynamics and Thermal Power Plant Simulator"
   author: Sanja Boskovic and Serhat Beyenir
-  date: last-modified # today or last-modified or "2026-04-30"
+  date: today # today or last-modified or "2026-04-30"
   date-format: "D MMMM YYYY"
   downloads: [pdf]
 
