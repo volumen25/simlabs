@@ -1,6 +1,6 @@
 ---
-title: "SIM LABS"
-subtitle: "Simulator Lab Exercises for Thermodynamics and TPPS"
+title: "Simulator Lab Exercises for Kongsberg TPPS and Thermodynamics"
+author: "Sanja Boskovic & Serhat Beyenir"
 format: pptx
 ---
 
@@ -133,4 +133,4 @@ $$\text{C}_n\text{H}_m + y\!\left(\text{O}_2 + \frac{79}{21}\,\text{N}_2\right) 
 - Six labs featured today span efficiency, emissions, heat transfer, and combustion topics
 - Each lab pairs a theoretical model with hands on simulator operation, reinforcing safe practice and environmental awareness
 
-## Questions
+## Q&A
