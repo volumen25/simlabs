@@ -1,0 +1,136 @@
+---
+title: "Simulator Lab Exercises for Kongsberg TPPS and Thermodynamics"
+author: "Sanja Boskovic & Serhat Beyenir"
+format: pptx
+---
+
+## Overview
+
+- Simulator lab exercises (SIM LABS) support Thermodynamics and Thermal Power Plant Simulator (TPPS) courses
+- Built on Kongsberg's TPPS platform
+- This session presents a selection of SIM LABS developed for classroom and lab use
+
+## The Challenge
+
+- Power Engineering students often struggle with theoretical concepts
+- Instructors face limited instructional time to cover both theory and practice
+- A gap remains between classroom theory and hands on plant operation
+
+## How SIM LABS Help
+
+- Strengthen understanding of core ThermoFluids principles
+- Support application of theory in realistic operational contexts
+- Allow students to visualize processes and explore system behaviour
+- Build cause and effect connections between operating parameters and outcomes
+
+## Learning Benefits
+
+- Enhance conceptual comprehension
+- Prepare learners for hands on work with real equipment in a physical plant
+- Reinforce safe operational practices
+- Build environmental awareness within steam plant systems
+
+## SIM LABS Featured in This Session
+
+- Boiler Efficiency
+- Turbine Efficiency
+- Power Plant Efficiency
+- NOx Emissions
+- Heat Exchangers
+- Combustion Analysis
+
+## Boiler Efficiency: Objective and Theory
+
+- Operate the plant in four modes and compute boiler thermal efficiency: 230 MW burning HFO, 80% load burning biofuel, 80% load burning coal, and 80% load burning coal with soot buildup
+- Boiler thermal efficiency is the ratio of energy to steam over energy from fuel
+
+$$\eta_{\text{boiler}} = \frac{m_s (h_2 - h_1)}{m_f HV} \times 100\%$$
+
+## Boiler Efficiency: Lab and Deliverables
+
+- Four initial conditions: I10, I15, I14 (coal), and I14 with soot configured via MD250
+- Log HFO, pellet, and coal heating value tags, then use steam tables to find enthalpy values
+- Deliverables: trend plots for all four conditions, efficiency computations, and a conclusion comparing results
+
+## Turbine Efficiency: Objective and Theory
+
+- Operate the plant at 35% load, 80% load, and 230 MW to compute the isentropic enthalpy change and thermal efficiency for the HP turbine
+- Turbine efficiency compares the actual enthalpy drop to the ideal, constant entropy expansion
+
+$$\eta_{\text{Turbine}} = \frac{H_1 - H_{2'}}{H_1 - H_2}$$
+
+- A higher pressure drop in a single stage increases the reheat factor and lowers efficiency, which is why multi-stage turbines with reheat perform better
+
+## Turbine Efficiency: Lab and Deliverables
+
+- Three initial conditions: I13 (35% load), I14 (80% load), and I10 (230 MW)
+- Compare results across conditions to determine which load yields the most favourable efficiency
+- Deliverables: trend plots for all three conditions, efficiency computations, and a conclusion with suggestions for further study
+
+## Power Plant Efficiency: Objective and Theory
+
+- Operate the plant at full capacity and compute overall efficiency under three conditions: normal operation, high cooling water temperature (35°C), and without regeneration
+- The Rankine cycle efficiency is net work output over heat supplied in the boiler
+
+$$\eta_{\text{Rankine}} = \frac{W_{\text{Turbine}} - W_{\text{Pump}}}{Q_{\text{boiler}}}$$
+
+- Reheat and regeneration both raise the average temperature at which heat is supplied, improving efficiency over the simple Rankine cycle
+
+## Power Plant Efficiency: Lab and Deliverables
+
+- Run initial condition I10 and draw a T-S diagram of the cycle including reheat and regeneration
+- Set cooling water temperature (tag T00305) to 35°C for the high temperature case, and to 10°C with extraction valves closed for the no regeneration case
+- Deliverables: T-S diagram, trend plots, efficiency computations for all three conditions, and a conclusion
+
+## NOx Emissions: Objective and Theory
+
+- Operate the plant at full capacity and compare NOx emissions under five conditions: normal, OFA damper failure, OBA control failure, poor quality fuel, and DeNOx plant bypassed
+- NOx forms through two mechanisms: thermal NOx, which rises exponentially with flame temperature, and fuel-bound NOx, which depends on fuel nitrogen content
+- The DeNOx plant uses selective catalytic reduction with ammonia to remove NOx from flue gas
+
+## NOx Emissions: Lab and Deliverables
+
+- Establish a stable operation baseline, then activate OFA malfunction 0881 and OBA malfunction 0780 in turn, switch to poor quality coal, and bypass SCR 1 and SCR 2
+- Tabulate percentage deviation from baseline for each condition
+
+$$\text{Percentage deviation} = \frac{\text{Current Value} - \text{Reference Value}}{\text{Reference Value}} \times 100\%$$
+
+- Deliverables: labelled trend plots, deviation calculations and plots, and a conclusion
+
+## Heat Exchangers: Objective and Theory
+
+- Operate the plant at full capacity and study the effect of heat exchanger surface area using LP Feed Heater 3
+- Parallel flow heat exchangers have their largest temperature difference at the inlet, while counter flow heat exchangers maintain a more constant temperature difference along their length
+- Heat transfer depends on the heat area factor (UA) and the log mean temperature difference
+
+$$Q = F \cdot (UA) \cdot \Delta T_{\text{LMTD}}, \qquad \varepsilon = \frac{Q}{Q_{\max}}$$
+
+## Heat Exchangers: Lab and Deliverables
+
+- Run initial condition I10 and vary the Heat Area Factor (tag C34201) across three levels: 0.5, 1.0, and 1.5
+- Run each setting for 15 minutes, then freeze and print trends
+- Deliverables: labelled trend plots for each setting, LMTD and effectiveness calculations, and a conclusion comparing the three tests
+
+## Combustion Analysis: Objective and Theory
+
+- Operate the plant at 80% capacity burning coal to perform combustion analyses for two coal types and compare results
+- The stoichiometric combustion equation balances carbon, hydrogen, and nitrogen between fuel and air
+
+$$\text{C}_n\text{H}_m + y\!\left(\text{O}_2 + \frac{79}{21}\,\text{N}_2\right) \rightarrow a\,\text{CO}_2 + b\,\text{H}_2\text{O} + c\,\text{N}_2$$
+
+- Worked example: stoichiometric combustion of octane yields an air to fuel mass ratio of 15.25 kg air per kg fuel
+
+## Combustion Analysis: Lab and Deliverables
+
+- Run initial condition I14 with default coal, then switch to poor quality coal using Variable List page 0111 on MD180
+- For both fuels, calculate total O2 required, stoichiometric air, product mass, and mass percentage of CO2, H2O, SO2, and N2
+- Compare furnace outlet SOx and NOx flow, CO and O2 content, theoretical combustion air, and coal heat value
+- Deliverables: labelled trend plots, combustion analyses for both fuels, and a conclusion
+
+## Summary
+
+- SIM LABS bridge the gap between theory and practical plant operation
+- Six labs featured today span efficiency, emissions, heat transfer, and combustion topics
+- Each lab pairs a theoretical model with hands on simulator operation, reinforcing safe practice and environmental awareness
+
+## Q&A
